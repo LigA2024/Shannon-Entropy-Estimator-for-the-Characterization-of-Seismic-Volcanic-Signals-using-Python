@@ -15,3 +15,14 @@ For these main reasons, it is important and extremely useful for the human opera
 the calculation process of large volumes of data using mathematical parameters such as Shannon Entropy, Kurtosis, Frequency Index, and Energy 
 (complemented by their respective envelopes), obtaining results in a more reliable and simple way. In this way, much more information 
 can be provided about the volcanic processes (pre-eruptive and post-eruptive), contributing to better early warning systems.
+
+
+## Data-repositories
+
+
+It is important to highlight that the raw data corresponding to the Colima and La Palma volcanoes analyzed for this study can be found online at ZENODO:
+
+[https://zenodo.org/records/10781903]
+[https://zenodo.org/records/10781515] 
+
+Please, to run properly, the code should be modified including the path where these files are located locally.
