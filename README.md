@@ -58,4 +58,5 @@ It is important to highlight that the raw data corresponding to the Colima and L
 Please, to run properly, the code should be modified including the path where these files are located locally.
 
 Developed, Design and writing by: Ligdamis A. Gutiérrez E. PhD.
+
 Shannon Entropy Work by Pablo Rey D.
