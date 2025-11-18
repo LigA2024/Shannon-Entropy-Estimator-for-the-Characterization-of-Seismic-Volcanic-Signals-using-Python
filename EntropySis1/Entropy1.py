@@ -306,7 +306,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
         self.pushButton.setIcon(icon)
         self.pushButton.setObjectName("pushButton")
 
-        self.pushButton_2 = QtWidgets.QPushButton(self.frame)                   # Command Button (store CSV and NPY file output)
+        self.pushButton_2 = QtWidgets.QPushButton(self.frame)                   # Command Button (store CSV and TXT file output)
         self.pushButton_2.setGeometry(QtCore.QRect(462, 70, 112, 31))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -857,7 +857,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
 
         # Color and text formatting on Command Buttons
         self.pushButton.setStyleSheet("background-color: honeydew; color: blue")                # Text and Color of the Command Button (load records)
-        self.pushButton_2.setStyleSheet("background-color: silver; color: blue")                # Text and Color of the Command Button (store CSV and NPY file output)
+        self.pushButton_2.setStyleSheet("background-color: silver; color: blue")                # Text and Color of the Command Button (store CSV and TXT file output)
         self.pushButton_3.setStyleSheet("background-color: skyblue; color: blue")               # Text and Color of the Command Button (Plot Entropy)
         self.pushButton_4.setStyleSheet("background-color: bisque; color: blue")                # Text and Color of the Command Button (Clean inputs)
         self.pushButton_5.setStyleSheet("background-color: CornflowerBlue; color: white")       # Text and Color of the Command Button (Exit)
@@ -873,7 +873,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
 
         # PushButton Labels
         self.pushButton.setText(_translate("MainWindow", "Load Records"))
-        self.pushButton_2.setText(_translate("MainWindow", "CSV and NPY File"))
+        self.pushButton_2.setText(_translate("MainWindow", "CSV and TXT File"))
         self.pushButton_3.setText(_translate("MainWindow", " Plot Calculations"))
         self.pushButton_4.setText(_translate("MainWindow", "Clear entries"))
         self.pushButton_5.setText(_translate("MainWindow", "  Exit"))
@@ -881,7 +881,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
 
         # PushButton ToolTip
         self.pushButton.setToolTip(_translate("MainWindow", "<html><head/><body><p><span style=\" font-weight:600; color:#00007f;\">Load Records</span></p></body></html>"))
-        self.pushButton_2.setToolTip(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:7pt; font-weight:500; color:#00007f;\">Store CSV and NPY file</span></p></body></html>"))
+        self.pushButton_2.setToolTip(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:7pt; font-weight:500; color:#00007f;\">Store CSV and TXT file</span></p></body></html>"))
         self.pushButton_3.setToolTip(_translate("MainWindow", "<html><head/><body><p><span style=\" font-weight:600; color:#00007f;\">Plot Results</span></p></body></html>"))
         self.pushButton_4.setToolTip(_translate("MainWindow", "<html><head/><body><p><span style=\" font-weight:600; color:#00007f;\">Clear inputs</span></p></body></html>"))
         self.pushButton_5.setToolTip(_translate("MainWindow", "<html><head/><body><p><span style=\" font-weight:600; color:#aa0000;\">Exit</span></p></body></html>"))
@@ -904,7 +904,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
         self.label_23.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#0000ff;\">Window width</span></p></body></html>"))
         self.label_24.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#0000ff;\">Selection of loading records and storing output file</span></p></body></html>"))
         self.label_25.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#0000ff;\">Directory selection</span></p></body></html>"))
-        self.label_26.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#0000ff;\">CSV and NPY File</span></p></body></html>"))
+        self.label_26.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#0000ff;\">CSV and TXT File</span></p></body></html>"))
         self.label_27.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#0000ff;\">Analysis window length</span></p></body></html>"))
         self.label_28.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#0000ff;\">Time intervals selection windows </span></p></body></html>"))
         self.label_29.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:6pt; font-weight:600; font-style:italic; color:#00007f;\">By default = 3</span></p></body></html>"))
@@ -1087,7 +1087,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
             self.label_5.setFont(font)                                          # Printing using text format.
             self.label_5.setText(self.archivo_abierto3 + "/")                   # Printing on the file path label.
 
-    def Store_File(self):                                   # Function to select the directory where the files CSV and NPY are store.
+    def Store_File(self):                                   # Function to select the directory where the files CSV and TXT are store.
         if sistema == "Windows":                            # Windows System
 
             self.archivo_abierto4=filedialog.askdirectory(initialdir = "/",
@@ -1441,7 +1441,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -1998,7 +1998,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -2578,7 +2578,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -3133,7 +3133,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -3719,7 +3719,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -4322,7 +4322,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo8 = QMessageBox()
                     MensCombo8.setIcon(QMessageBox.Warning)
-                    MensCombo8.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo8.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo8.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo8.exec()
 
@@ -4866,7 +4866,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -5464,7 +5464,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo8 = QMessageBox()
                     MensCombo8.setIcon(QMessageBox.Warning)
-                    MensCombo8.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo8.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo8.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo8.exec()
 
@@ -6010,7 +6010,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -6548,7 +6548,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -6804,7 +6804,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                     # **** SAVE THE RESULTS FILE .CSV
                     archivoFil2 = (self.label_8.text())                         # Reading directory label.
 
-                   # **** SAVE THE RESULTS  .CSV and .NPY FILE FOR LATER GRAPH *****
+                   # **** SAVE THE RESULTS  .CSV and .TXT FILE FOR LATER GRAPH *****
                     TW = str(Tam1)                                              # Convert Envelope Window value to string for names.
                     F1 = (Nombre3 + '_Lowpass_Filter_10m ' + '_Windows=' + TW + '.csv')            # Assign F1, Capture the name of the record and add the .csv extension.
 
@@ -7122,7 +7122,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -7664,7 +7664,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -7920,7 +7920,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                     # **** SAVE THE RESULTS FILE .CSV
                     archivoFil2 = (self.label_8.text())                         # Reading directory label.
 
-                   # **** SAVE THE RESULTS  .CSV and .NPY FILE FOR LATER GRAPH *****
+                   # **** SAVE THE RESULTS  .CSV and .TXT FILE FOR LATER GRAPH *****
                     TW = str(Tam1)                                              # Convert Envelope Window value to string for names.
                     F1 = (Nombre3 + '_Highpass_Filter_10m ' + '_Windows=' + TW + '.csv')            # Assign F1, Capture the name of the record and add the .csv extension.
 
@@ -8236,7 +8236,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -8830,7 +8830,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo8 = QMessageBox()
                     MensCombo8.setIcon(QMessageBox.Warning)
-                    MensCombo8.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo8.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo8.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo8.exec()
 
@@ -9057,7 +9057,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
 
                     archivoFil2 = (self.label_8.text())                         # Reading directory label.
 
-                    # **** SAVE THE RESULTS  .CSV and .NPY FILE FOR LATER GRAPH *****
+                    # **** SAVE THE RESULTS  .CSV and .TXT FILE FOR LATER GRAPH *****
                     TW = str(Tam1)                                              # Convert Envelope Window value to string for names.
                     F1 = (Nombre3 + '_Bandpass_Filter_10m ' + '_Windows=' + TW + '.csv')            # Assign F1, Capture the name of the record and add the .csv extension.
 
@@ -9375,7 +9375,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -9965,7 +9965,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo8 = QMessageBox()
                     MensCombo8.setIcon(QMessageBox.Warning)
-                    MensCombo8.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo8.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo8.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo8.exec()
 
@@ -10193,7 +10193,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
 
                     archivoFil2 = (self.label_8.text())                         # Reading directory label.
 
-                    # **** SAVE THE RESULTS  .CSV and .NPY FILE FOR LATER GRAPH *****
+                    # **** SAVE THE RESULTS  .CSV and .TXT FILE FOR LATER GRAPH *****
                     TW = str(Tam1)                                              # Convert Envelope Window value to string for names.
                     F1 = (Nombre3 + '_Bandstop_Filter_10m ' + '_Windows=' + TW + '.csv')            # Assign F1, Capture the name of the record and add the .csv extension.
 
@@ -10510,7 +10510,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -11058,7 +11058,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -11635,7 +11635,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -12178,7 +12178,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -12753,7 +12753,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -13352,7 +13352,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo8 = QMessageBox()
                     MensCombo8.setIcon(QMessageBox.Warning)
-                    MensCombo8.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo8.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo8.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo8.exec()
 
@@ -13894,7 +13894,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -14490,7 +14490,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo8 = QMessageBox()
                     MensCombo8.setIcon(QMessageBox.Warning)
-                    MensCombo8.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo8.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo8.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo8.exec()
 
@@ -15031,7 +15031,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -15574,7 +15574,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -15834,7 +15834,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                     # **** SAVE THE RESULTS FILE .CSV
                     archivoFil2 = (self.label_8.text())                         # Reading directory label.
 
-                   # **** SAVE THE RESULTS  .CSV and .NPY FILE FOR LATER GRAPH *****
+                   # **** SAVE THE RESULTS  .CSV and .TXT FILE FOR LATER GRAPH *****
                     TW = str(Tam1)                                              # Convert Envelope Window value to string for names.
                     F1 = (Nombre3 + '_Lowpass_Filter_5m ' + '_Windows=' + TW + '.csv')            # Assign F1, Capture the name of the record and add the .csv extension.
 
@@ -16239,7 +16239,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -16806,7 +16806,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -17067,7 +17067,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                     # **** SAVE THE RESULTS FILE .CSV
                     archivoFil2 = (self.label_8.text())                         # Reading directory label.
 
-                   # **** SAVE THE RESULTS  .CSV and .NPY FILE FOR LATER GRAPH *****
+                   # **** SAVE THE RESULTS  .CSV and .TXT FILE FOR LATER GRAPH *****
                     TW = str(Tam1)                                              # Convert Envelope Window value to string for names.
                     F1 = (Nombre3 + '_Highpass_Filter_5m ' + '_Windows=' + TW + '.csv')            # Assign F1, Capture the name of the record and add the .csv extension.
 
@@ -17469,7 +17469,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -18124,7 +18124,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo8 = QMessageBox()
                     MensCombo8.setIcon(QMessageBox.Warning)
-                    MensCombo8.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo8.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo8.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo8.exec()
 
@@ -18348,7 +18348,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
 
                     archivoFil2 = (self.label_8.text())                         # Reading directory label.
 
-                    # **** SAVE THE RESULTS  .CSV and .NPY FILE FOR LATER GRAPH *****
+                    # **** SAVE THE RESULTS  .CSV and .TXT FILE FOR LATER GRAPH *****
                     TW = str(Tam1)                                              # Convert Envelope Window value to string for names.
                     F1 = (Nombre3 + '_Bandpass_Filter_5m ' + '_Windows=' + TW + '.csv')            # Assign F1, Capture the name of the record and add the .csv extension.
 
@@ -18749,7 +18749,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo2 = QMessageBox()
                     MensCombo2.setIcon(QMessageBox.Warning)
-                    MensCombo2.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo2.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo2.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo2.exec()
 
@@ -19339,7 +19339,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
                 elif not self.label_8.text():
                     MensCombo8 = QMessageBox()
                     MensCombo8.setIcon(QMessageBox.Warning)
-                    MensCombo8.setWindowTitle("Empty path to store CSV/NPY file")
+                    MensCombo8.setWindowTitle("Empty path to store CSV/TXT file")
                     MensCombo8.setText("Please, enter a valid name of directory")
                     returnValue = MensCombo8.exec()
 
@@ -19565,7 +19565,7 @@ class Ui_MainWindow(object):                            # Main Class of Program 
 
                     archivoFil2 = (self.label_8.text())                         # Reading directory label.
 
-                    # **** SAVE THE RESULTS  .CSV and .NPY FILE FOR LATER GRAPH *****
+                    # **** SAVE THE RESULTS  .CSV and .TXT FILE FOR LATER GRAPH *****
                     TW = str(Tam1)                                              # Convert Envelope Window value to string for names.
                     F1 = (Nombre3 + '_Bandstop_Filter_5m ' + '_Windows=' + TW + '.csv')            # Assign F1, Capture the name of the record and add the .csv extension.
 
